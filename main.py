@@ -74,8 +74,8 @@ predicted_true = 0
 predicted_false = 0
 
 # train and test 20 times and take average
-repetation = 20
-for i in range(repetation):
+number_of_repeat = 20
+for i in range(number_of_repeat):
     network = MultiLayerNeuralNetwork(
         train_x[0].size, train_y[0].size, [20, 15, 10])
 
@@ -88,11 +88,11 @@ for i in range(repetation):
     predicted_true += test_results[1]
     predicted_false += test_results[2]
 
-iteration_average = iteration/repetation
-error_average = train_error/repetation
-test_error_average = test_error/repetation
-predicted_true_average = predicted_true/repetation
-predicted_false_average = predicted_false/repetation
+iteration_average = iteration/number_of_repeat
+error_average = train_error/number_of_repeat
+test_error_average = test_error/number_of_repeat
+predicted_true_average = predicted_true/number_of_repeat
+predicted_false_average = predicted_false/number_of_repeat
 
 print(iteration_average)
 print(error_average)
